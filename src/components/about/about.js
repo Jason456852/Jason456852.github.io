@@ -1,3 +1,5 @@
-export default function About() {
+const About=()=> {
     return <>This is about.</>
 }
+
+export default About;

@@ -5,6 +5,7 @@ import {
     RouterProvider
 } from "react-router-dom";
 import Loading from './components/loading.js';
+import Error from './components/error.js';
 
 const Home = lazy(() => import("./components/homepage/home.js"));
 const About = lazy(() => import("./components/about/about.js"));
@@ -14,14 +15,17 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Home />,
+        errorElement: <Error />,
     },
     {
         path: "/about",
         element: <About />,
+        errorElement: <Error />,
     },
     {
         path: "/contact",
         element: <Contact />,
+        errorElement: <Error />,
     },
 ])
 
