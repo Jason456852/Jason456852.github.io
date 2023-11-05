@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/675.5073719f.chunk.js","mappings":"qKAAe,SAASA,IACpB,OAAOC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,CAAAC,SAAE,kBACb,C","sources":["components/about/about.js"],"sourcesContent":["export default function About() {\r\n    return <>This is about.</>\r\n}"],"names":["About","_jsx","_Fragment","children"],"sourceRoot":""}
