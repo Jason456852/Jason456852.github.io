@@ -14,18 +14,16 @@ const Contact = lazy(() => import("./components/contact/contact.js"));
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />,
+        element: <Suspense fallback={<Loading />}><Root /></Suspense>,
         errorElement: <Error />,
         children: [
             {
-                path: "about",
+                path: "/about",
                 element: <About />,
-                errorElement: <Error />,
             },
             {
-                path: "contact",
+                path: "/contact",
                 element: <Contact />,
-                errorElement: <Error />,
             },
         ]
     },
@@ -34,8 +32,6 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <Suspense fallback={<Loading />}>
-        <RouterProvider router={router} />
-    </Suspense>
+    <RouterProvider router={router} />
 );
 

@@ -1,4 +1,4 @@
-const About=()=> {
+const About = () => {
     return (<>This is about.</>);
 }
 
