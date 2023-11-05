@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/48.f16561c0.chunk.js","mappings":"mKAAA,MAIA,EAJWA,KACCC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,CAAAC,SAAE,iB","sources":["components/homepage/home.js"],"sourcesContent":["const Home=()=> {\r\n    return (<>This is home.</>);\r\n}\r\n\r\nexport default Home;"],"names":["Home","_jsx","_Fragment","children"],"sourceRoot":""}

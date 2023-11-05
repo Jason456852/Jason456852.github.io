@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjasonyeung_github_io=self.webpackChunkjasonyeung_github_io||[]).push([[48],{48:(e,s,n)=>{n.r(s),n.d(s,{default:()=>h});var u=n(184);const h=()=>(0,u.jsx)(u.Fragment,{children:"This is home."})}}]);
+//# sourceMappingURL=48.f16561c0.chunk.js.map

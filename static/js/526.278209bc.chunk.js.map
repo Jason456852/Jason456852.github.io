@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/526.278209bc.chunk.js","mappings":"qKAAe,SAASA,IACpB,OAAOC,EAAAA,EAAAA,KAAAC,EAAAA,SAAA,CAAAC,SAAE,oBACb,C","sources":["components/contact/contact.js"],"sourcesContent":["export default function Contact() {\r\n    return <>This is contact.</>\r\n}"],"names":["Contact","_jsx","_Fragment","children"],"sourceRoot":""}
