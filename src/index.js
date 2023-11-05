@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import {
     createBrowserRouter,
     RouterProvider
 } from "react-router-dom";
 import "./index.css";
-import Root from "./routes/root";
+import Loading from './components/loading.js';
+
+const Home = lazy(() => import("../home/home.js"));
+const About = lazy(() => import("../about/about.js"));
+const Contact = lazy(() => import("../contact/contact.js"));
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Root />,
+        element: <Home />,
+    },
+    {
+        path: "/about",
+        element: <About />,
+    },
+    {
+        path: "/contact",
+        element: <Contact />,
     },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <RouterProvider router={router} />
+    <Suspense fallback={<Loading />}>
+        <RouterProvider router={router} />
+    </Suspense>
 );
 
