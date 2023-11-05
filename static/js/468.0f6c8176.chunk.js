@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjasonyeung_github_io=self.webpackChunkjasonyeung_github_io||[]).push([[468],{468:(s,e,n)=>{n.r(e),n.d(e,{default:()=>i});var h=n(184);const i=()=>(0,h.jsxs)(h.Fragment,{children:["This is home.",(0,h.jsx)("nav",{children:(0,h.jsxs)("ul",{children:[(0,h.jsx)("li",{children:(0,h.jsx)("a",{href:"/about",children:"About"})}),(0,h.jsx)("li",{children:(0,h.jsx)("a",{href:"/contacts",children:"Contact"})})]})})]})}}]);
+//# sourceMappingURL=468.0f6c8176.chunk.js.map
