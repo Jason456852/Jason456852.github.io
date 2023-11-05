@@ -8,9 +8,9 @@ import {
 import "./index.css";
 import Loading from './components/loading.js';
 
-const Home = lazy(() => import("../home/home.js"));
-const About = lazy(() => import("../about/about.js"));
-const Contact = lazy(() => import("../contact/contact.js"));
+const Home = lazy(() => import("./home/home.js"));
+const About = lazy(() => import("./about/about.js"));
+const Contact = lazy(() => import("./contact/contact.js"));
 
 const router = createBrowserRouter([
     {
