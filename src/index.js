@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import Loading from './components/loading.js';
 
-const Home = lazy(() => import("./home/home.js"));
-const About = lazy(() => import("./about/about.js"));
-const Contact = lazy(() => import("./contact/contact.js"));
+const Home = lazy(() => import("./components/homepage/home.js"));
+const About = lazy(() => import("./components/about/about.js"));
+const Contact = lazy(() => import("./components/contact/contact.js"));
 
 const router = createBrowserRouter([
     {
