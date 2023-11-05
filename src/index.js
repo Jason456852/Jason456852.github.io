@@ -4,7 +4,6 @@ import {
     createBrowserRouter,
     RouterProvider
 } from "react-router-dom";
-import "./index.css";
 import Loading from './components/loading.js';
 
 const Home = lazy(() => import("./home/home.js"));
