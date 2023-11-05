@@ -7,14 +7,14 @@ import {
 import Loading from './components/loading.js';
 import Error from './components/error.js';
 
-const Homepage = lazy(() => import("./components/homepage/homepage.js"));
+const Root = lazy(() => import("./components/router/root.js"));
 const About = lazy(() => import("./components/about/about.js"));
 const Contact = lazy(() => import("./components/contact/contact.js"));
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Homepage />,
+        element: <Root />,
         errorElement: <Error />,
         children: [
             {
