@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from "react-router-dom";
-import Root from './components/root.js';
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import Loading from './components/loading.js';
+import Error from './components/error.js';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const Homepage = lazy(() => import("./components/homepage/homepage.js"));
+const About = lazy(() => import("./components/about/about.js"));
+const Contact = lazy(() => import("./components/contact/contact.js"));
 
-root.render(
+const router = createBrowserRouter([
+    {
+        path: "/*",
+        element: <Suspense fallback={<Loading />}><Homepage /></Suspense>,
+        errorElement: <Error />,
+        children: [
+            {
+                path: "/about",
+                element: <Suspense fallback={<Loading />}><About /></Suspense>,
+            },
+            {
+                path: "/contact",
+                element: <Suspense fallback={<Loading />}><Contact /></Suspense>,
+            },
+        ]
+    },
+])
+
+ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <HashRouter>
-            <Root />
-        </HashRouter>
+        <RouterProvider router={router} />
     </React.StrictMode>
 );
 
