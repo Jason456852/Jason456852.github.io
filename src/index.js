@@ -13,16 +13,16 @@ const Contact = lazy(() => import("./components/contact/contact.js"));
 
 const router = createHashRouter([
     {
-        path: "/*",
+        path: "/",
         element: <Suspense fallback={<Loading />}><Homepage /></Suspense>,
         errorElement: <Error />,
         children: [
             {
-                path: "/about",
+                path: "about",
                 element: <Suspense fallback={<Loading />}><About /></Suspense>,
             },
             {
-                path: "/contact",
+                path: "contact",
                 element: <Suspense fallback={<Loading />}><Contact /></Suspense>,
             },
         ]
