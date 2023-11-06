@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjason456852_github_io=self.webpackChunkjason456852_github_io||[]).push([[921],{921:(s,e,i)=>{i.r(e),i.d(e,{default:()=>c});var n=i(87),t=i(184);const c=()=>(0,t.jsxs)(t.Fragment,{children:["This is homepage.",(0,t.jsx)("nav",{children:(0,t.jsxs)("ul",{children:[(0,t.jsx)("li",{children:(0,t.jsx)(n.rU,{to:"about",children:"About"})}),(0,t.jsx)("li",{children:(0,t.jsx)(n.rU,{to:"contact",children:"Contact"})})]})})]})}}]);
+//# sourceMappingURL=921.60c24fd5.chunk.js.map
