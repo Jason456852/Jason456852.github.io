@@ -1,7 +1,7 @@
 {
   "name": "jason456852.github.io",
   "version": "0.1.0",
-  "homepage": "https://jason456852.github.io",
+  "homepage": "https://jason456852.github.io/#",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
