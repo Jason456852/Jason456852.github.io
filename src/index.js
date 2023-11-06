@@ -6,24 +6,27 @@ import {
 } from "react-router-dom";
 import Loading from './components/loading.js';
 import Error from './components/error.js';
+import Homepage from './components/homepage/homepage.js';
+import About from './components/about/about.js';
+import Contact from './components/contact/contact.js';
 
-const Homepage = lazy(() => import("./components/homepage/homepage.js"));
-const About = lazy(() => import("./components/about/about.js"));
-const Contact = lazy(() => import("./components/contact/contact.js"));
+// const Homepage = lazy(() => import("./components/homepage/homepage.js"));
+// const About = lazy(() => import("./components/about/about.js"));
+// const Contact = lazy(() => import("./components/contact/contact.js"));
 
 const router = createHashRouter([
     {
         path: "/",
-        element: <Suspense fallback={<Loading />}><Homepage /></Suspense>,
+        element: <Homepage />,
         errorElement: <Error />,
         children: [
             {
                 path: "about",
-                element: <Suspense fallback={<Loading />}><About /></Suspense>,
+                element: <About />,
             },
             {
                 path: "contact",
-                element: <Suspense fallback={<Loading />}><Contact /></Suspense>,
+                element: <Contact />,
             },
         ]
     },
