@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-    createBrowserRouter,
+    createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 import Loading from './components/loading.js';
@@ -11,7 +11,7 @@ const Homepage = lazy(() => import("./components/homepage/homepage.js"));
 const About = lazy(() => import("./components/about/about.js"));
 const Contact = lazy(() => import("./components/contact/contact.js"));
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Suspense fallback={<Loading />}><Homepage /></Suspense>,
