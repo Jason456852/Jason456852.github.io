@@ -10,9 +10,10 @@ import CodeOffIcon from '@mui/icons-material/CodeOff';
 import WorkIcon from '@mui/icons-material/Work';
 import StorefrontIcon from '@mui/icons-material/Storefront';
 import { uni_font_family, uni_font_color, uni_font_color_sub_1 } from "../constants";
-import img from '../../media/test.jpg';
 import img1 from '../../media/1.jpg';
 import img2 from '../../media/2.jpg';
+import img3 from '../../media/3.jpg';
+import img4 from '../../media/4.jpg';
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -36,7 +37,7 @@ const Homepage = () => {
         <Grid container>
             {cardDetails.map((cardDetail, index) =>
                 <Grid item xs={6}>
-                    <Card sx={{ maxWidth: 450, margin: "0 auto", marginY: 5 }}>
+                    <Card sx={{ maxWidth: 400, margin: "0 auto", marginY: 5 }}>
                         <CardHeader
                             title={<Typography fontSize={24} color={uni_font_color} fontFamily={uni_font_family} fontWeight="bold">
                                 {cardDetail.title}
@@ -45,7 +46,7 @@ const Homepage = () => {
                                 {cardDetail.subheader}
                             </Typography>}
                         />
-                        <CardMedia component="img" height="194" image={cardDetail.image} />
+                        <CardMedia component="img" height="250" image={cardDetail.image} />
                         <CardContent>
                             <Typography variant="body2" color={uni_font_color_sub_1} fontFamily={uni_font_family}>
                                 {cardDetail.brief}
@@ -96,7 +97,7 @@ const cardDetails = [
     {
         title: (<><CableIcon sx={{ verticalAlign: "-10%" }} />Connect dots...</>),
         subheader: "Now • Vancouver",
-        image: img,
+        image: img3,
         brief: "Love to connect everything with applications to smoothen steps and processes",
         paragraphs: [
             "I am a dedicated problem solver with a deep passion for coding and automation. My expertise lies in crafting elegant scripts that seamlessly automate a variety of tasks, transforming them into efficient, robotic processes. I thrive on the pursuit of creating clean, logical, and tidy solutions that enhance the work environment and elevate the quality of life for individuals and organizations alike.",
@@ -107,7 +108,7 @@ const cardDetails = [
     {
         title: (<><WorkIcon sx={{ verticalAlign: "-10%" }} />Working in CA<StorefrontIcon sx={{ verticalAlign: "-10%" }} /></>),
         subheader: "Sept, 2023 - Oct, 2023 • Vancouver, BC",
-        image: img,
+        image: img4,
         brief: "One part-time experience in a Chinese herb clinic",
         paragraphs: [
             "During my time at the Chinese herb clinic, I gained valuable hands-on experience in efficiently packing various products, including herbal medicines and medicine powder packs. This role sharpened my attention to detail and precision as I ensured the quality and accuracy of each package. I took pride in contributing to the clinic's commitment to providing high-quality products to its customers.",
