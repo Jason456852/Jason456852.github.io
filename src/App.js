@@ -14,13 +14,13 @@ import { uni_font_color, uni_font_family } from "./components/constants.js";
 
 const Homepage = lazy(() => import("./components/homepage/homepage.js"));
 const MyProjects = lazy(() => import("./components/myProjects/myProjects.js"));
-const About = lazy(() => import("./components/about/about.js"));
+const Experience = lazy(() => import("./components/Experience/experience.js"));
 const Contact = lazy(() => import("./components/contact/contact.js"));
 
 const links = [
     { icon: HomeIcon, to: '', label: 'home' },
     { icon: AccountTreeIcon, to: 'myProjects', label: 'my projects' },
-    { icon: InfoIcon, to: 'about', label: 'about me' },
+    { icon: InfoIcon, to: 'experience', label: 'experience' },
     { icon: ConnectWithoutContactIcon, to: 'contact', label: 'contact me' },
 ];
 
@@ -39,10 +39,26 @@ const App = () => {
                         </Typography>
                     </Stack>
                 </Grid>
-                <Grid item xs={10}>
-                    <Typography sx={{ fontWeight: 600, display: "inline", textAlign: "left", backgroundImage: "conic-gradient(from 0rad at 50% 0, green, darkgreen, lightgreen, greenyellow)", color: "transparent", backgroundClip: "text", WebkitBackgroundClip: "text", fontFamily: uni_font_family }} variant="h3">
-                        Pak Ling YEUNG
-                    </Typography>
+                <Grid item xs={8}>
+                    <Stack>
+                        <Typography variant="h3"
+                            sx={{
+                                margin: "0 auto",
+                                fontWeight: 600,
+                                display: "inline",
+                                textAlign: "left",
+                                backgroundImage: "conic-gradient(from 0rad at 50% 0, green, darkgreen, lightgreen, greenyellow)",
+                                color: "transparent",
+                                backgroundClip: "text",
+                                WebkitBackgroundClip: "text",
+                                fontFamily: uni_font_family
+                            }} >
+                            Pak Ling YEUNG
+                        </Typography>
+                    </Stack>
+                </Grid>
+                <Grid item xs={2}>
+                    
                 </Grid>
                 <Grid item xs={12} sx={{
                     display: 'flex',
@@ -70,7 +86,7 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Suspense fallback={<Loading />}><Homepage /></Suspense>}></Route>
                         <Route path="/myProjects" element={<Suspense fallback={<Loading />}><MyProjects /></Suspense>}></Route>
-                        <Route path="/about" element={<Suspense fallback={<Loading />}><About /></Suspense>}></Route>
+                        <Route path="/experience" element={<Suspense fallback={<Loading />}><Experience /></Suspense>}></Route>
                         <Route path="/contact" element={<Suspense fallback={<Loading />}><Contact /></Suspense>}></Route>
                     </Routes>
                 </Grid>
