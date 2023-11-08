@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjason456852_github_io=self.webpackChunkjason456852_github_io||[]).push([[526],{5526:(s,t,a)=>{a.r(t),a.d(t,{default:()=>i});var e=a(184);const i=()=>(0,e.jsx)(e.Fragment,{children:"This is contact."})}}]);
-//# sourceMappingURL=526.57179d72.chunk.js.map
