@@ -44,9 +44,17 @@ export const tabInfo = [
             "Self Improvement", "Innovation", "Efficiency", "Coding", "Web Development", "Batch Scripts", "Productivity", "Technology", "SDLC", "Design Patterns", "Discipline", "Health", "Adaptation"
         ],
         links: [
+            // {
+            //     url: "https://docs.google.com/document/d/1irPTMUyznGVJ8qXeQFsPsaS5JA35SuAN-0koondTe8M/edit?usp=sharing",
+            //     label: "CV - General"
+            // },
+            // {
+            //     url: "https://docs.google.com/document/d/1sSaVqVVBtzNolCbROV0AFB_lp8p-vlFK9ZkfcSfJ-dg/edit?usp=sharing",
+            //     label: "CV - Developer"
+            // },
             {
                 url: "https://docs.google.com/spreadsheets/d/1M7fRyo1V4KlO6Xf6i_4LhelYEOqxKXBtgPXAK23oT_4/edit?usp=sharing",
-                label: "Vancouver Food Breakdown"
+                label: "Food Price Excel"
             }
         ]
     },

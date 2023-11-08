@@ -6,6 +6,7 @@ import { uni_font_family, uni_font_color, uni_font_color_sub_1 } from "../consta
 import { cardInfo } from "./cardInfo";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleExpanded } from "../../redux/homepageSlice";
+import Presenter from "../presenter";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -30,10 +31,10 @@ const Homepage = () => {
     return (
         <>
             <Divider children="Home" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
-            <Grid container sx={{ width: 800, margin:"0 auto" }}>
+            <Grid container sx={{ width: 700, margin:"0 auto" }}>
                 {cardInfo.map((cardDetail, index) =>
                     <Grid key={index} item xs={6}>
-                        <Card sx={{ maxWidth: 350, margin: "0 auto", marginY: 5 }}>
+                        <Card sx={{ maxWidth: 325, margin: "0 auto", marginY: 5 }}>
                             <CardHeader
                                 title={<Typography fontSize={24} color={uni_font_color} fontFamily={uni_font_family} fontWeight="bold">
                                     {cardDetail.title}
@@ -42,10 +43,10 @@ const Homepage = () => {
                                     {cardDetail.subheader}
                                 </Typography>}
                             />
-                            <CardMedia component="img" height="250" image={cardDetail.image} />
+                            <CardMedia component="img" height="230" image={cardDetail.image} />
                             <CardContent>
                                 <Typography variant="body2" color={uni_font_color_sub_1} fontFamily={uni_font_family}>
-                                    {cardDetail.brief}
+                                    {"> " + cardDetail.brief}
                                 </Typography>
                             </CardContent>
                             <Divider children="More..." size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }} />
@@ -56,7 +57,7 @@ const Homepage = () => {
                             </CardActions>
                             <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                    {cardDetail.paragraphs.map((v, i) => <Typography key={i} paragraph variant="body2" color={uni_font_color} fontFamily={uni_font_family}>{v}</Typography>)}
+                                    {cardDetail.paragraphs.map((v, i) => <Typography key={i} paragraph variant="body2" color={uni_font_color} fontFamily={uni_font_family}>{"> " + v}</Typography>)}
                                 </CardContent>
                             </Collapse>
                         </Card>

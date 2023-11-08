@@ -9,7 +9,7 @@ const Experience = () => {
     return (
         <>
             <Divider children="Experience" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
-            <Box sx={{ width: 800, margin: "0 auto", flexGrow: 1, display: 'flex' }}>
+            <Box sx={{ width: 700, margin: "0 auto", flexGrow: 1, display: 'flex' }}>
                 <Tabs
                     orientation="vertical"
                     value={value}
@@ -18,7 +18,7 @@ const Experience = () => {
                     indicatorColor='#000000'
                     sx={{ borderRight: 1, borderColor: 'divider' }}
                 >
-                    {tabInfo.map((tab, i) => <Tab key={i} id={i} label={tab.label} icon={tab.icon} iconPosition="start" sx={{ fontFamily: uni_font_family, color: value === i ? uni_font_color : uni_font_color_sub_1, textDecoration: value === i ? "underline" : "none" }} />)}
+                    {tabInfo.map((tab, i) => <Tab key={i} id={i} label={tab.label} icon={tab.icon} iconPosition="top" sx={{ fontFamily: uni_font_family, color: value === i ? uni_font_color : uni_font_color_sub_1, textDecoration: value === i ? "underline" : "none" }} />)}
                 </Tabs>
                 {tabInfo.map((tab, i) => (
                     value === i && <Box key={i} sx={{ p: 3, maxWidth: 600 }}>
@@ -68,7 +68,7 @@ const Experience = () => {
                                 sx={{
                                     marginY: 2
                                 }}>
-                                {"> "}{paragraph}
+                                {"> " + paragraph}
                             </Typography>)}
                     </Box>
                 ))}
