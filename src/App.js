@@ -5,12 +5,12 @@ import { Link as RouterLink } from "react-router-dom";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Avatar, Button, ButtonGroup, Grid, Icon, Link, Stack, Typography } from "@mui/material";
-import PersonIcon from '@mui/icons-material/Person';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import InfoIcon from '@mui/icons-material/Info';
 import HomeIcon from '@mui/icons-material/Home';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import { uni_font_color, uni_font_family } from "./components/constants.js";
+import icon from "./media/icon.jpg";
 
 const Homepage = lazy(() => import("./components/homepage/homepage.js"));
 const MyProjects = lazy(() => import("./components/myProjects/myProjects.js"));
@@ -31,9 +31,7 @@ const App = () => {
             <Grid sx={{ minWidth: 900, width: "95%", margin: "0 auto", alignItems: 'center' }} container spacing={2}>
                 <Grid item xs={2}>
                     <Stack>
-                        <Avatar sx={{ margin: "0 auto" }}>
-                            <PersonIcon />
-                        </Avatar>
+                        <Avatar size="lg" sx={{ margin: "0 auto", PointerEvent: "none", onclick:"none" }} src={icon} />
                         <Typography variant="button" sx={{ margin: "0 auto", color: uni_font_color, fontFamily: uni_font_family }}>
                             Jason
                         </Typography>
@@ -58,7 +56,7 @@ const App = () => {
                     </Stack>
                 </Grid>
                 <Grid item xs={2}>
-                    
+
                 </Grid>
                 <Grid item xs={12} sx={{
                     display: 'flex',
