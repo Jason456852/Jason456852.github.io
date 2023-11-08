@@ -95,7 +95,7 @@ export const tabInfo = [
         links: [
             {
                 url: "https://www.yellowpages.ca/bus/British-Columbia/Richmond/Natural-Herbs-Trading-Ltd/2428147.html",
-                label: "Yellow Page"
+                label: "Company Yellow Page"
             }
         ]
     },

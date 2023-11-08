@@ -29,11 +29,11 @@ const Homepage = () => {
 
     return (
         <>
-            <Divider children="Home" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }}/>
-            <Grid container>
+            <Divider children="Home" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
+            <Grid container sx={{ width: 800, margin:"0 auto" }}>
                 {cardInfo.map((cardDetail, index) =>
                     <Grid key={index} item xs={6}>
-                        <Card sx={{ maxWidth: 400, margin: "0 auto", marginY: 5 }}>
+                        <Card sx={{ maxWidth: 350, margin: "0 auto", marginY: 5 }}>
                             <CardHeader
                                 title={<Typography fontSize={24} color={uni_font_color} fontFamily={uni_font_family} fontWeight="bold">
                                     {cardDetail.title}

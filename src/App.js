@@ -28,8 +28,8 @@ const App = () => {
     return (
         <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })}>
             <CssBaseline />
-            <Grid sx={{ minWidth: 900, width: "95%", margin: "0 auto", alignItems: 'center' }} container spacing={2}>
-                <Grid item xs={2}>
+            <Grid sx={{ width: 800, margin: "0 auto", alignItems: 'center' }} container spacing={2}>
+                <Grid item xs={3}>
                     <Stack>
                         <Avatar size="lg" sx={{ margin: "0 auto", PointerEvent: "none", onclick:"none" }} src={icon} />
                         <Typography variant="button" sx={{ margin: "0 auto", color: uni_font_color, fontFamily: uni_font_family }}>
@@ -37,7 +37,7 @@ const App = () => {
                         </Typography>
                     </Stack>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={9}>
                     <Stack>
                         <Typography variant="h3"
                             sx={{
@@ -54,9 +54,6 @@ const App = () => {
                             Pak Ling YEUNG
                         </Typography>
                     </Stack>
-                </Grid>
-                <Grid item xs={2}>
-
                 </Grid>
                 <Grid item xs={12} sx={{
                     display: 'flex',
@@ -87,6 +84,9 @@ const App = () => {
                         <Route path="/experience" element={<Suspense fallback={<Loading />}><Experience /></Suspense>}></Route>
                         <Route path="/contact" element={<Suspense fallback={<Loading />}><Contact /></Suspense>}></Route>
                     </Routes>
+                </Grid>
+                <Grid item xs={12}>
+                    
                 </Grid>
             </Grid>
         </ThemeProvider>

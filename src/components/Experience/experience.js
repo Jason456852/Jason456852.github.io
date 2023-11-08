@@ -9,7 +9,7 @@ const Experience = () => {
     return (
         <>
             <Divider children="Experience" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
-            <Box sx={{ flexGrow: 1, display: 'flex' }}>
+            <Box sx={{ width: 800, margin: "0 auto", flexGrow: 1, display: 'flex' }}>
                 <Tabs
                     orientation="vertical"
                     value={value}
@@ -36,6 +36,7 @@ const Experience = () => {
                                 <Button
                                     key={j}
                                     href={link.url}
+                                    target="_blank"
                                     sx={{
                                         fontFamily: uni_font_family,
                                         color: uni_font_color_sub_1,
