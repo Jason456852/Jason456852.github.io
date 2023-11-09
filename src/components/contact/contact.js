@@ -1,8 +1,6 @@
 import { Divider, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Link } from "@mui/material";
 import { uni_font_color, uni_font_color_sub_1, uni_font_family } from "../constants";
 import { tableInfo } from "./tableInfo";
-import Presenter from "../presenter";
-import { fileInfo } from "./fileInfo";
 
 const Contact = () => {
     return (<>
@@ -33,7 +31,6 @@ const Contact = () => {
                 </TableBody>
             </Table>
         </TableContainer>
-        <Presenter files={fileInfo} buttonName={"Resumes and Cover Letter"} />
     </>);
 }
 

@@ -1,10 +1,7 @@
-import { FileJson } from '../presenter';
 import SchoolIcon from '@mui/icons-material/School';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CodeIcon from '@mui/icons-material/Code';
 import StoreIcon from '@mui/icons-material/Store';
-
-import GraduationCertificate from "../../media/HKUST Graduation Certificate - Pak Ling Yeung.pdf";
 
 export const tabInfo = [
     {
@@ -29,14 +26,7 @@ export const tabInfo = [
                 label: "Official Program Website"
             }
         ],
-        files: [
-            {
-                label: "Graduation Certificate",
-                fileInfo: [
-                    new FileJson(GraduationCertificate, "pdf", "Graduation Certificate", "It is hereby certified that Yeung, Pak Ling having successfully completed the approved program of study has this day been admitted to the Degree of Bachelor of Engineering in Electronic Engineering with Second Class Honors, Division II.", "The Hong Kong University of Science and Technology", "26-11-2022")
-                ]
-            }
-        ]
+        files: []
     },
     {
         label: "Self Learning",
@@ -56,7 +46,7 @@ export const tabInfo = [
         ],
         links: [
             {
-                url: "https://docs.google.com/spreadsheets/d/1M7fRyo1V4KlO6Xf6i_4LhelYEOqxKXBtgPXAK23oT_4/edit?usp=sharing",
+                url: "https://docs.google.com/spreadsheets/d/19Nkbrf4nyB5X4wW9cAR42Eson73vEgD94tI6lja8A2A/edit?usp=sharing",
                 label: "Food Price Excel"
             }
         ],
