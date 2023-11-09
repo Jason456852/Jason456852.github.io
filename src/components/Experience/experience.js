@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Divider, Typography, Tabs, Tab, Box, Button, ButtonGroup } from '@mui/material';
 import { uni_font_color, uni_font_color_sub_1, uni_font_family } from '../constants';
 import { tabInfo } from './tabInfo';
+import Presenter from '../presenter';
 
 const Experience = () => {
     const [value, setValue] = React.useState(0);
@@ -49,6 +50,7 @@ const Experience = () => {
                                     {link.label}
                                 </Button>)}
                         </ButtonGroup>
+                        {tab.files.map((file, j) => <Presenter key={j} files={file.fileInfo} buttonName={file.label} />)}
                         <Typography
                             color={uni_font_color_sub_1}
                             fontFamily={uni_font_family}

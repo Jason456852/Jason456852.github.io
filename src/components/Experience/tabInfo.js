@@ -1,7 +1,10 @@
+import { FileJson } from '../presenter';
 import SchoolIcon from '@mui/icons-material/School';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CodeIcon from '@mui/icons-material/Code';
 import StoreIcon from '@mui/icons-material/Store';
+
+import GraduationCertificate from "../../media/HKUST Graduation Certificate - Pak Ling Yeung.pdf";
 
 export const tabInfo = [
     {
@@ -25,6 +28,14 @@ export const tabInfo = [
                 url: "https://ece.hkust.edu.hk/programs/4yr_ug_beng_elec",
                 label: "Official Program Website"
             }
+        ],
+        files: [
+            {
+                label: "Graduation Certificate",
+                fileInfo: [
+                    new FileJson(GraduationCertificate, "pdf", "Graduation Certificate", "It is hereby certified that Yeung, Pak Ling having successfully completed the approved program of study has this day been admitted to the Degree of Bachelor of Engineering in Electronic Engineering with Second Class Honors, Division II.", "The Hong Kong University of Science and Technology", "26-11-2022")
+                ]
+            }
         ]
     },
     {
@@ -44,19 +55,12 @@ export const tabInfo = [
             "Self Improvement", "Innovation", "Efficiency", "Coding", "Web Development", "Batch Scripts", "Productivity", "Technology", "SDLC", "Design Patterns", "Discipline", "Health", "Adaptation"
         ],
         links: [
-            // {
-            //     url: "https://docs.google.com/document/d/1irPTMUyznGVJ8qXeQFsPsaS5JA35SuAN-0koondTe8M/edit?usp=sharing",
-            //     label: "CV - General"
-            // },
-            // {
-            //     url: "https://docs.google.com/document/d/1sSaVqVVBtzNolCbROV0AFB_lp8p-vlFK9ZkfcSfJ-dg/edit?usp=sharing",
-            //     label: "CV - Developer"
-            // },
             {
                 url: "https://docs.google.com/spreadsheets/d/1M7fRyo1V4KlO6Xf6i_4LhelYEOqxKXBtgPXAK23oT_4/edit?usp=sharing",
                 label: "Food Price Excel"
             }
-        ]
+        ],
+        files: []
     },
     {
         "label": "Working Experience #1",
@@ -83,7 +87,8 @@ export const tabInfo = [
                 url: "https://macroview.com/",
                 label: "Company Website"
             }
-        ]
+        ],
+        files: []
     },
     {
         label: "Working Experience #2",
@@ -105,6 +110,7 @@ export const tabInfo = [
                 url: "https://www.yellowpages.ca/bus/British-Columbia/Richmond/Natural-Herbs-Trading-Ltd/2428147.html",
                 label: "Company Yellow Page"
             }
-        ]
+        ],
+        files: []
     },
 ];

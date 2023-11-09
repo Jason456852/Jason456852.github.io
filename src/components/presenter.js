@@ -67,7 +67,7 @@ const Presenter = ({ files, buttonName }) => {
 				</DialogContent>
 				<DialogActions>
 					<Typography fontSize={12} color={uni_font_color_sub_1} fontFamily={uni_font_family}>Last Modified: {files[currentFileIndex].timeTag}</Typography>
-					<Tooltip
+					{files.length > 1 && <><Tooltip
 						componentsProps={{
 							tooltip: {
 								sx: {
@@ -94,7 +94,7 @@ const Presenter = ({ files, buttonName }) => {
 						<IconButton onClick={showNextFile} color="primary">
 							<ArrowRightIcon sx={{ margin: "0 auto", color: uni_font_color }} />
 						</IconButton>
-					</Tooltip>
+					</Tooltip></>}
 					<Tooltip
 						componentsProps={{
 							tooltip: {
