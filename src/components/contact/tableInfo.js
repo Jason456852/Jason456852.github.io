@@ -1,8 +1,8 @@
 export const tableInfo = [
     {
         target: "Email",
-        hrefString: "mailto:paklingyeung.work@gmail.com?subject=%5BYour%20Name%5D%20said%20hi%20from%20your%20personal%20website!",
-        label: "paklingyeung.work@gmail.com"
+        hrefString: "mailto:paklingyeung.work@gamil.com?subject=%5BYour%20Name%5D%20said%20hi%20from%20your%20personal%20website!",
+        label: "pakling.yeung456852@gmail.com"
     },
     {
         target: "LinkedIn",
