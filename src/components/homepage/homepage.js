@@ -6,7 +6,6 @@ import { uni_font_family, uni_font_color, uni_font_color_sub_1 } from "../consta
 import { cardInfo } from "./cardInfo";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleExpanded } from "../../redux/homepageSlice";
-import Presenter from "../presenter";
 
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
@@ -22,11 +21,6 @@ const ExpandMore = styled((props) => {
 const Homepage = () => {
     const dispatch = useDispatch();
     const expanded = useSelector(state => state.homepage.expanded);
-    // const [expanded, setExpanded] = React.useState(cardInfo.map(() => false));
-
-    // const handleExpandClick = (index) => {
-    //     setExpanded(expanded.map((boolean, currentIndex) => index === currentIndex ? !boolean : boolean));
-    // };
 
     return (
         <>
