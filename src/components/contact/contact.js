@@ -17,14 +17,14 @@ const Contact = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {tableInfo.map((row) => (
-                        <TableRow key={row.name}>
+                    {tableInfo.map((row, index) => (
+                        <TableRow key={index}>
                             <TableCell component="th" scope="row" sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
                                 {"> " + row.target}
                             </TableCell>
                             <TableCell sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
                                 {"> "}
-                                <Link sx={{ fontFamily: uni_font_family, color: uni_font_color }} button key="Email" component="a" target="_blank" href={row.hrefString}>
+                                <Link sx={{ fontFamily: uni_font_family, color: uni_font_color }} key="Email" component="a" target="_blank" href={row.hrefString}>
                                     {row.label}
                                 </Link>
                             </TableCell>

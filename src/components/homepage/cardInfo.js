@@ -26,7 +26,7 @@ export const cardInfo = [
         ]
     },
     {
-        title: (<><CodeIcon sx={{ verticalAlign: "-10%" }} />Life - Development<CodeOffIcon sx={{ verticalAlign: "-10%" }} /></>),
+        title: (<><CodeIcon sx={{ verticalAlign: "-10%" }} />DevLife<CodeOffIcon sx={{ verticalAlign: "-10%" }} /></>),
         subheader: "Sept 2019 - June 2023 • Hong Kong",
         image: img2,
         brief: "4-yrs experienced software development, 1-yr experienced Full Stack App Dev",

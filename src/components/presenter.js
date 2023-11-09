@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Card, CardMedia, Dialog, DialogContent, DialogTitle, DialogActions, DialogContentText, Typography, IconButton, Tooltip } from '@mui/material';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -17,10 +17,6 @@ export function FileJson(target, type, name, description, location, timeTag) {
 const Presenter = ({ files, buttonName }) => {
 	const [open, setOpen] = useState(false);
 	const [currentFileIndex, setCurrentFileIndex] = useState(0);
-
-	useEffect(() => {
-		console.log(files, buttonName);
-	}, [])
 
 	const openModal = (index) => {
 		setCurrentFileIndex(index);
