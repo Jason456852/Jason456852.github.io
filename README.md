@@ -1,5 +1,7 @@
 # Pak Ling Yeung, Jason
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Welcome to my personal website hosted on GitHub. This website serves as a platform to showcase my projects, portfolio, and share information about myself.
 
 ## Contact
