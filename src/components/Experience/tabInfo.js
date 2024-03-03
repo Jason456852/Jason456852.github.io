@@ -2,6 +2,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CodeIcon from '@mui/icons-material/Code';
 import StoreIcon from '@mui/icons-material/Store';
+import BallotIcon from '@mui/icons-material/Ballot';
 
 export const tabInfo = [
     {
@@ -53,7 +54,7 @@ export const tabInfo = [
         files: []
     },
     {
-        "label": "Working Experience #1",
+        "label": "First Job in HK",
         "icon": <CodeIcon />,
         "header": "Application Developer",
         "period": "Aug 2022 - Jun 2023",
@@ -81,8 +82,31 @@ export const tabInfo = [
         files: []
     },
     {
-        label: "Working Experience #2",
+        label: "Part-time in Canada",
         icon: (<StoreIcon />),
+        header: "Clerk (Part-time)",
+        period: "Sep 2023 - Oct 2023",
+        organization: "Natural Herbs",
+        city: "Vancouver, Canada",
+        paragraphs: [
+            "During my part-time role as a Clerk at Natural Herbs in Vancouver, Canada, I was entrusted with essential responsibilities that contributed to the smooth operation of the Chinese Herb Clinic. This experience allowed me to further develop my organizational and customer service skills.",
+            "My daily tasks included meticulously packing herbal medicines and ensuring a seamless patient flow within the clinic. In addition to patient care, I took on retailing duties, which involved tasks such as maintaining a clean and organized workspace, sorting products, and restocking storage and display cabinets. My attention to detail and dedication to retailing excellence were evident in my work, ensuring a pleasant experience for patients and customers alike.",
+            "This opportunity at Natural Herbs provided me with valuable experience in a healthcare and retail environment, enhancing my ability to handle diverse tasks efficiently and serve the needs of both the clinic and its patrons."
+        ],
+        tags: [
+            "Clerk", "Part Time", "Customer Service", "Retailing", "Herbal Medicines", "Healthcare", "Organizational Skills"
+        ],
+        links: [
+            {
+                url: "https://www.yellowpages.ca/bus/British-Columbia/Richmond/Natural-Herbs-Trading-Ltd/2428147.html",
+                label: "Company Yellow Page"
+            }
+        ],
+        files: []
+    },
+    {
+        label: "Doing Everything",
+        icon: (<BallotIcon />),
         header: "Clerk (Part-time)",
         period: "Sep 2023 - Oct 2023",
         organization: "Natural Herbs",
