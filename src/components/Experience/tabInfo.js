@@ -7,6 +7,7 @@ import BallotIcon from '@mui/icons-material/Ballot';
 export const tabInfo = [
     {
         label: "Education",
+        phrase: "The Knowledge Architect: Building the Foundation for Success",
         icon: (<SchoolIcon />),
         header: "BEng in Electronic Engineering",
         period: "Sep 2018 - Aug 2022",
@@ -31,6 +32,7 @@ export const tabInfo = [
     },
     {
         label: "Self Learning",
+        phrase: "The Code Crusader: Embracing Continuous Learning & Innovation",
         icon: (<AutoStoriesIcon />),
         header: "Learning, Coding, Adapting",
         period: "Every Day",
@@ -54,13 +56,14 @@ export const tabInfo = [
         files: []
     },
     {
-        "label": "First Job in HK",
-        "icon": <CodeIcon />,
-        "header": "Application Developer",
-        "period": "Aug 2022 - Jun 2023",
-        "organization": "Macroview HK - HGC Global Communication Limited",
-        "city": "Hong Kong, China",
-        "paragraphs": [
+        label: "First Job",
+        phrase: "The Tech Alchemist: Transforming Ideas into Reality",
+        icon: <CodeIcon />,
+        header: "Application Developer",
+        period: "Aug 2022 - Jun 2023",
+        organization: "Macroview HK - HGC Global Communication Limited",
+        city: "Hong Kong, China",
+        paragraphs: [
             "As an Application Developer, I had the privilege of working on a variety of projects, utilizing a range of technologies and methodologies. My development experience spanned both Agile and Waterfall software development lifecycle, allowing me to adapt to diverse project requirements with ease.",
             "My technical expertise included leveraging design patterns such as Facade and Singleton to create efficient and scalable solutions. I contributed to the development and maintenance of web applications, providing robust and user-friendly experiences for our clients and end-users.",
             "Additionally, I took on the responsibility of providing Tier 1 help desk support, demonstrating my commitment to ensuring the smooth operation of essential tools like MS Office and Jira. I actively resolved bugs and provided assistance to users, contributing to improved user satisfaction and system reliability.",
@@ -73,7 +76,7 @@ export const tabInfo = [
         tags: [
             "Application Developer", "Agile", "Waterfall", "Design Patterns", "Web Development", "Tier 1 Support", "MS Office", "Jira", "MySQL", ".NET 6", "REST APIs", "ReactJS", "Redux", "Role based Permissions", "SSRS", "Robotic Process Automation", "RPA", "TagUI", "C#", "Batch Scripts", "Enterprise Resource Planning", "IT Skills", "Information Technology", "GitLab CI/CD", "Docker"
         ],
-        "links": [
+        links: [
             {
                 url: "https://macroview.com/",
                 label: "Company Website"
@@ -82,7 +85,8 @@ export const tabInfo = [
         files: []
     },
     {
-        label: "Part-time in Canada",
+        label: "PT in Canada",
+        phrase: "The Service Maestro: Orchestrating Smooth Operations",
         icon: (<StoreIcon />),
         header: "Clerk (Part-time)",
         period: "Sep 2023 - Oct 2023",
@@ -105,24 +109,35 @@ export const tabInfo = [
         files: []
     },
     {
-        label: "Doing Everything",
+        label: "First FT in Canada",
+        phrase: "The Efficiency Catalyst: Streamlining Operations & Empowering Growth",
         icon: (<BallotIcon />),
-        header: "Clerk (Part-time)",
-        period: "Sep 2023 - Oct 2023",
-        organization: "Natural Herbs",
-        city: "Vancouver, Canada",
+        header: "Office Administrator, System Architect and Technical Support Specialist",
+        period: "Nov 2023 - Now",
+        organization: "Canadian Refrigeration & Air Conditioning Ltd.",
+        city: "Burnaby, Canada",
         paragraphs: [
-            "During my part-time role as a Clerk at Natural Herbs in Vancouver, Canada, I was entrusted with essential responsibilities that contributed to the smooth operation of the Chinese Herb Clinic. This experience allowed me to further develop my organizational and customer service skills.",
-            "My daily tasks included meticulously packing herbal medicines and ensuring a seamless patient flow within the clinic. In addition to patient care, I took on retailing duties, which involved tasks such as maintaining a clean and organized workspace, sorting products, and restocking storage and display cabinets. My attention to detail and dedication to retailing excellence were evident in my work, ensuring a pleasant experience for patients and customers alike.",
-            "This opportunity at Natural Herbs provided me with valuable experience in a healthcare and retail environment, enhancing my ability to handle diverse tasks efficiently and serve the needs of both the clinic and its patrons."
+            "As the Office Administrator, I am the conductor of a well-oiled symphony, ensuring tasks run smoothly and communication flows seamlessly. I harness the power of QuickBooks and Microsoft tools to craft professional invoices and quotations with accuracy and speed, keeping financial transactions flowing effortlessly by monitoring and documenting all incoming invoices and statements from the suppliers and payments from customers. My inbox serves as the communication hub, expertly navigating email traffic from supplier invoices and statements to customer inquiries, ensuring every message is addressed effectively.",
+            "Beyond the digital realm, I foster a positive and productive work environment. I oversee employee time sheets, upholding accountability, while also providing versatile technical support for the team. From maintaining office cleanliness and security to assisting my senior colleague, I go the extra mile to enhance everyone's experience. Additionally, I'm committed to continuous learning, actively upgrading office computer literacy in areas like QuickBooks and document management, empowering the team to thrive in the digital age.",
+            "My true passion lies in unlocking the potential of technology, and as a System Architect, I'm equipped with a diverse skill set to do just that. I wield tools like Google Sheets with App Script, VBA macros, C# console app, Docker, and MySQL to craft innovative solutions, storing information and streamlining processes with automated reports, quotations, invoices, and time sheets, ensuring effortless precision. Additionally, I champion efficiency by crafting batch scripts that automate repetitive tasks, freeing up valuable time and resources.",
+            "Beyond core functionalities, I actively contribute to a technologically adept workplace. I spearhead the upgrading of outdated hardware, replacing 10-15 year old machines with equipment suited for current workload demands. This is complemented by empowering employees with training on new tools and information management practices, including utilizing password managers like LastPass and note-taking apps like Remarkable 2. To facilitate seamless remote collaboration, I implement TeamViewer and internal remote connections within the office. Finally, I meticulously configure QuickBooks accounts and workstation permissions, ensuring each employee has the tools they need to thrive.",
+            "Furthermore, I delve into the realm of email management, implementing comprehensive strategies with browser applications, templates, and automation tools to keep communication flowing effortlessly. My contributions extend beyond company walls, as I built and actively manage the company information on our github.io page, Microsoft Business, and Google Business platforms."
         ],
         tags: [
-            "Clerk", "Part Time", "Customer Service", "Retailing", "Herbal Medicines", "Healthcare", "Organizational Skills"
+            "Office Administration",
+            "System Architecture",
+            "Technical Support",
+            "QuickBooks",
+            "VBA",
+            "C#",
+            "Docker",
+            "MySQL",
+            "Network Administration"
         ],
         links: [
             {
-                url: "https://www.yellowpages.ca/bus/British-Columbia/Richmond/Natural-Herbs-Trading-Ltd/2428147.html",
-                label: "Company Yellow Page"
+                url: "https://canadianrefrigeration.github.io/",
+                label: "Company Github Page"
             }
         ],
         files: []

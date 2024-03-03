@@ -14,7 +14,7 @@ const Experience = () => {
 
     useEffect(() => {
         dispatch(setCurrentPage(2));
-    }, [])
+    })
 
     if (screenWidth <= 800) {
         return (
@@ -46,7 +46,7 @@ const Experience = () => {
                     value === i &&
                     <Grid item xs={12} key={i}>
                         <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} gutterBottom sx={{ fontSize: 14 }} >
-                            {tab.label}
+                            {tab.phrase}
                         </Typography>
                         <Typography variant="h5" color={uni_font_color} fontFamily={uni_font_family}>
                             {tab.header}

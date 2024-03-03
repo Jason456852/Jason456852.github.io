@@ -11,7 +11,7 @@ const Contact = () => {
 
     useEffect(() => {
         dispatch(setCurrentPage(3));
-    }, [])
+    })
 
     if (screenWidth <= 800) {
         return (
