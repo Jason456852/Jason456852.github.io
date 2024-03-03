@@ -65,7 +65,7 @@ const Experience = () => {
                                 >
                                     <Box>
                                         <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} gutterBottom sx={{ fontSize: 14 }} >
-                                            {tab.label}
+                                            {tab.phrase}
                                         </Typography>
                                         <Typography variant="h5" color={uni_font_color} fontFamily={uni_font_family}>
                                             {tab.header}
@@ -194,7 +194,7 @@ const Experience = () => {
                                 >
                                     <Box>
                                         <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} gutterBottom sx={{ fontSize: 14 }} >
-                                            {tab.label}
+                                            {tab.phrase}
                                         </Typography>
                                         <Typography variant="h5" color={uni_font_color} fontFamily={uni_font_family}>
                                             {tab.header}
