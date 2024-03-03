@@ -1,4 +1,4 @@
-import { Divider, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Link, Box, Grid, Grow } from "@mui/material";
+import { Divider, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Link, Box, Grid, Grow, Typography } from "@mui/material";
 import { uni_font_color, uni_font_color_sub_1, uni_font_family } from "../constants";
 import { tableInfo } from "./tableInfo";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,14 +23,44 @@ const Contact = () => {
             >
                 <Grid container sx={{ width: "95%" }}>
                     {tableInfo.map((row, index) => (
-                        <Grid item xs={12} key={index} sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
-                            {"> "}
-                            <Link sx={{ fontFamily: uni_font_family, color: uni_font_color, wordWrap: 'break-word', textDecorationColor: uni_font_color }}
-                                key="Email" component="a" target="_blank" href={row.hrefString}>
-                                {row.target}
-                            </Link>
-                        </Grid>
+                        <Grow
+                            in={true}
+                            style={{
+                                transformOrigin: '0 0 0',
+                                transitionDelay: index * 100
+                            }}
+                            {...{ timeout: 1000 }}
+                        >
+                            <Grid item xs={12} key={index} sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
+                                {"> "}
+                                <Link sx={{ fontFamily: uni_font_family, color: uni_font_color, wordWrap: 'break-word', textDecorationColor: uni_font_color }}
+                                    key="Email" component="a" target="_blank" href={row.hrefString}>
+                                    {row.target}
+                                </Link>
+                            </Grid>
+                        </Grow>
                     ))}
+                    <Grow
+                        in={true}
+                        style={{
+                            transformOrigin: '0 0 0',
+                            transitionDelay: tableInfo.length * 100
+                        }}
+                        {...{ timeout: 1000 }}
+                    >
+                        <Grid item xs={12}>
+                            <Typography
+                                color={uni_font_color_sub_1}
+                                fontFamily={uni_font_family}
+                                gutterBottom
+                                sx={{
+                                    fontSize: 12,
+                                    marginY: 2
+                                }}>
+                                # Email is preferred.
+                            </Typography>
+                        </Grid>
+                    </Grow>
                 </Grid>
             </Grow>
         );
@@ -45,7 +75,6 @@ const Contact = () => {
                     <Divider children="Contact" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
                     <TableContainer component={Paper} sx={{ maxWidth: "95%", margin: "0 auto", marginTop: 5, backgroundColor: "black", border: "1px solid green" }}>
                         <Table>
-                            <caption style={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }}>Email is preferred.</caption>
                             <TableHead>
                                 <TableRow>
                                     <TableCell width={150} sx={{ fontFamily: uni_font_family, color: uni_font_color, fontWeight: "bold" }}>Method</TableCell>
@@ -54,19 +83,38 @@ const Contact = () => {
                             </TableHead>
                             <TableBody>
                                 {tableInfo.map((row, index) => (
-                                    <TableRow key={index}>
-                                        <TableCell component="th" scope="row" sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
-                                            {"> " + row.target}
-                                        </TableCell>
-                                        <TableCell sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
-                                            {"> "}
-                                            <Link sx={{ fontFamily: uni_font_family, color: uni_font_color }} key="Email" component="a" target="_blank" href={row.hrefString}>
-                                                {row.label}
-                                            </Link>
-                                        </TableCell>
-                                    </TableRow>
+                                    <Grow
+                                        in={true}
+                                        style={{
+                                            transformOrigin: '0 0 0',
+                                            transitionDelay: index * 100
+                                        }}
+                                        {...{ timeout: 1000 }}
+                                    >
+                                        <TableRow key={index}>
+                                            <TableCell component="th" scope="row" sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
+                                                {"> " + row.target}
+                                            </TableCell>
+                                            <TableCell sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
+                                                {"> "}
+                                                <Link sx={{ fontFamily: uni_font_family, color: uni_font_color }} key="Email" component="a" target="_blank" href={row.hrefString}>
+                                                    {row.label}
+                                                </Link>
+                                            </TableCell>
+                                        </TableRow>
+                                    </Grow>
                                 ))}
                             </TableBody>
+                            <Grow
+                                in={true}
+                                style={{
+                                    transformOrigin: '0 0 0',
+                                    transitionDelay: tableInfo.length * 100
+                                }}
+                                {...{ timeout: 1000 }}
+                            >
+                                <caption style={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }}># Email is preferred.</caption>
+                            </Grow>
                         </Table>
                     </TableContainer>
                 </Box>

@@ -63,7 +63,19 @@ const Homepage = () => {
                                 </CardActions>
                                 <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
                                     <CardContent>
-                                        {cardDetail.paragraphs.map((v, i) => <Typography key={i} paragraph variant="body2" color={uni_font_color} fontFamily={uni_font_family}>{"> " + v}</Typography>)}
+                                        {cardDetail.paragraphs.map((v, i) =>
+                                            <Grow
+                                                in={expanded[index]}
+                                                style={{
+                                                    transformOrigin: '0 0 0',
+                                                    transitionDelay: expanded[index] ? i* 100 : 0
+                                                }}
+                                                {...(expanded[index]? { timeout: 1000 } : {})}
+                                            >
+                                                <Typography key={i} paragraph variant="body2" color={uni_font_color} fontFamily={uni_font_family}>
+                                                    {"> " + v}
+                                                </Typography>
+                                            </Grow>)}
                                     </CardContent>
                                 </Collapse>
                             </Card>

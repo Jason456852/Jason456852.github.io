@@ -56,55 +56,104 @@ const Experience = () => {
                             {...(value === i ? { timeout: 300 } : {})}
                         >
                             <Grid item xs={12} key={i}>
-                                <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} gutterBottom sx={{ fontSize: 14 }} >
-                                    {tab.phrase}
-                                </Typography>
-                                <Typography variant="h5" color={uni_font_color} fontFamily={uni_font_family}>
-                                    {tab.header}
-                                </Typography>
-                                <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} sx={{ mb: 1.5 }}>
-                                    {tab.period}<br />{tab.organization}<br />{tab.city}
-                                </Typography>
-                                <ButtonGroup variant="outlined" fontFamily={uni_font_family}>
-                                    {(tab.links).map((link, j) =>
-                                        <Button
-                                            key={j}
-                                            href={link.url}
-                                            target="_blank"
-                                            sx={{
-                                                fontFamily: uni_font_family,
-                                                color: uni_font_color_sub_1,
-                                                borderColor: uni_font_color_sub_1,
-                                                '&:hover': {
-                                                    color: uni_font_color,
-                                                    borderColor: uni_font_color,
-                                                }
-                                            }}>
-                                            {link.label}
-                                        </Button>)}
-                                </ButtonGroup>
-                                {tab.files.map((file, j) => <Presenter key={j} files={file.fileInfo} buttonName={file.label} />)}
-                                <Typography
-                                    color={uni_font_color_sub_1}
-                                    fontFamily={uni_font_family}
-                                    gutterBottom
-                                    sx={{
-                                        fontSize: 12,
-                                        marginY: 2
-                                    }}>
-                                    {(tab.tags).map((tag, j) => <span key={j}>#{tag.replace(/ /g, "")} </span>)}
-                                </Typography>
-                                {(tab.paragraphs).map((paragraph, j) =>
+                            <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0'
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
+                                    <Box>
+                                        <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} gutterBottom sx={{ fontSize: 14 }} >
+                                            {tab.label}
+                                        </Typography>
+                                        <Typography variant="h5" color={uni_font_color} fontFamily={uni_font_family}>
+                                            {tab.header}
+                                        </Typography>
+                                    </Box>
+                                </Grow>
+                                <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0',
+                                        transitionDelay: value === i ? 75 : 0
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
+                                    <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} sx={{ mb: 1.5 }}>
+                                        {tab.period}<br />{tab.organization}<br />{tab.city}
+                                    </Typography>
+                                </Grow>
+                                <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0',
+                                        transitionDelay: value === i ? 150 : 0
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
+                                    <Box>
+                                        <ButtonGroup variant="outlined" fontFamily={uni_font_family}>
+                                            {(tab.links).map((link, j) =>
+                                                <Button
+                                                    key={j}
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    sx={{
+                                                        fontFamily: uni_font_family,
+                                                        color: uni_font_color_sub_1,
+                                                        borderColor: uni_font_color_sub_1,
+                                                        '&:hover': {
+                                                            color: uni_font_color,
+                                                            borderColor: uni_font_color,
+                                                        }
+                                                    }}>
+                                                    {link.label}
+                                                </Button>)}
+                                        </ButtonGroup>
+                                        {tab.files.map((file, j) => <Presenter key={j} files={file.fileInfo} buttonName={file.label} />)}
+                                    </Box>
+                                </Grow>
+                                <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0',
+                                        transitionDelay: value === i ? 225 : 0
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
                                     <Typography
-                                        key={j}
-                                        variant="body2"
+                                        color={uni_font_color_sub_1}
                                         fontFamily={uni_font_family}
-                                        color={uni_font_color}
+                                        gutterBottom
                                         sx={{
+                                            fontSize: 12,
                                             marginY: 2
                                         }}>
-                                        {"> " + paragraph}
-                                    </Typography>)}
+                                        {(tab.tags).map((tag, j) => <span key={j}>#{tag.replace(/ /g, "")} </span>)}
+                                    </Typography>
+                                </Grow>
+                                {(tab.paragraphs).map((paragraph, j) =>
+                                    <Grow
+                                        key={j}
+                                        in={value === i}
+                                        style={{
+                                            transformOrigin: '0 0 0',
+                                            transitionDelay: value === i ? (j + 4) * 75  : 0
+                                        }}
+                                        {...(value === i ? { timeout: 1500 } : {})}
+                                    >
+                                        <Typography
+                                            key={j}
+                                            variant="body2"
+                                            fontFamily={uni_font_family}
+                                            color={uni_font_color}
+                                            sx={{
+                                                marginY: 2
+                                            }}>
+                                            {"> " + paragraph}
+                                        </Typography>
+                                    </Grow>)}
                             </Grid>
                         </Grow>
                     ))}
@@ -136,55 +185,104 @@ const Experience = () => {
                         {tabInfo.map((tab, i) => (
                             value === i &&
                             <Box sx={{ paddingLeft: 2, flex: 1, overflowY: 'auto' }}>
-                                <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} gutterBottom sx={{ fontSize: 14 }} >
-                                    {tab.label}
-                                </Typography>
-                                <Typography variant="h5" color={uni_font_color} fontFamily={uni_font_family}>
-                                    {tab.header}
-                                </Typography>
-                                <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} sx={{ mb: 1.5 }}>
-                                    {tab.period}<br />{tab.organization}<br />{tab.city}
-                                </Typography>
-                                <ButtonGroup variant="outlined" fontFamily={uni_font_family}>
-                                    {(tab.links).map((link, j) =>
-                                        <Button
-                                            key={j}
-                                            href={link.url}
-                                            target="_blank"
-                                            sx={{
-                                                fontFamily: uni_font_family,
-                                                color: uni_font_color_sub_1,
-                                                borderColor: uni_font_color_sub_1,
-                                                '&:hover': {
-                                                    color: uni_font_color,
-                                                    borderColor: uni_font_color,
-                                                }
-                                            }}>
-                                            {link.label}
-                                        </Button>)}
-                                </ButtonGroup>
-                                {tab.files.map((file, j) => <Presenter key={j} files={file.fileInfo} buttonName={file.label} />)}
-                                <Typography
-                                    color={uni_font_color_sub_1}
-                                    fontFamily={uni_font_family}
-                                    gutterBottom
-                                    sx={{
-                                        fontSize: 12,
-                                        marginY: 2
-                                    }}>
-                                    {(tab.tags).map((tag, j) => <span key={j}>#{tag.replace(/ /g, "")} </span>)}
-                                </Typography>
-                                {(tab.paragraphs).map((paragraph, j) =>
+                                <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0'
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
+                                    <Box>
+                                        <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} gutterBottom sx={{ fontSize: 14 }} >
+                                            {tab.label}
+                                        </Typography>
+                                        <Typography variant="h5" color={uni_font_color} fontFamily={uni_font_family}>
+                                            {tab.header}
+                                        </Typography>
+                                    </Box>
+                                </Grow>
+                                <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0',
+                                        transitionDelay: value === i ? 75 : 0
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
+                                    <Typography color={uni_font_color_sub_1} fontFamily={uni_font_family} sx={{ mb: 1.5 }}>
+                                        {tab.period}<br />{tab.organization}<br />{tab.city}
+                                    </Typography>
+                                </Grow>
+                                <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0',
+                                        transitionDelay: value === i ? 150 : 0
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
+                                    <Box>
+                                        <ButtonGroup variant="outlined" fontFamily={uni_font_family}>
+                                            {(tab.links).map((link, j) =>
+                                                <Button
+                                                    key={j}
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    sx={{
+                                                        fontFamily: uni_font_family,
+                                                        color: uni_font_color_sub_1,
+                                                        borderColor: uni_font_color_sub_1,
+                                                        '&:hover': {
+                                                            color: uni_font_color,
+                                                            borderColor: uni_font_color,
+                                                        }
+                                                    }}>
+                                                    {link.label}
+                                                </Button>)}
+                                        </ButtonGroup>
+                                        {tab.files.map((file, j) => <Presenter key={j} files={file.fileInfo} buttonName={file.label} />)}
+                                    </Box>
+                                </Grow>
+                                <Grow
+                                    in={value === i}
+                                    style={{
+                                        transformOrigin: '0 0 0',
+                                        transitionDelay: value === i ? 225 : 0
+                                    }}
+                                    {...(value === i ? { timeout: 1500 } : {})}
+                                >
                                     <Typography
-                                        key={j}
-                                        variant="body2"
+                                        color={uni_font_color_sub_1}
                                         fontFamily={uni_font_family}
-                                        color={uni_font_color}
+                                        gutterBottom
                                         sx={{
+                                            fontSize: 12,
                                             marginY: 2
                                         }}>
-                                        {"> " + paragraph}
-                                    </Typography>)}
+                                        {(tab.tags).map((tag, j) => <span key={j}>#{tag.replace(/ /g, "")} </span>)}
+                                    </Typography>
+                                </Grow>
+                                {(tab.paragraphs).map((paragraph, j) =>
+                                    <Grow
+                                        key={j}
+                                        in={value === i}
+                                        style={{
+                                            transformOrigin: '0 0 0',
+                                            transitionDelay: value === i ? (j + 4) * 75  : 0
+                                        }}
+                                        {...(value === i ? { timeout: 1500 } : {})}
+                                    >
+                                        <Typography
+                                            key={j}
+                                            variant="body2"
+                                            fontFamily={uni_font_family}
+                                            color={uni_font_color}
+                                            sx={{
+                                                marginY: 2
+                                            }}>
+                                            {"> " + paragraph}
+                                        </Typography>
+                                    </Grow>)}
                             </Box>
                         ))}
                     </Box>
