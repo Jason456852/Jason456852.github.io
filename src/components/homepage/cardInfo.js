@@ -14,6 +14,17 @@ import img4 from '../../media/4.jpg';
 
 export const cardInfo = [
     {
+        title: (<><CodeIcon sx={{ verticalAlign: "-10%" }} />DevLife<CodeOffIcon sx={{ verticalAlign: "-10%" }} /></>),
+        subheader: "Sept 2019 - June 2023 • Hong Kong",
+        image: img2,
+        brief: "4-yrs experienced software development, 1-yr experienced Full Stack App Dev",
+        paragraphs: [
+            "I bring 4 years of experience in software development, gained through coursework and hands-on projects at HKUST. Notable among these projects is my work on a Python-based computer vision system for monitoring elderly residents in care facilities.",
+            "Outside of academia, I've built Python applications and scripts, delving into SQL for database management. In my most recent role as a Full Stack Application Developer, I contributed to .NET 6, ReactJS, and MySQL projects, gaining insights into SDLC methodologies, design patterns, and tools like NAV and SSRS.",
+            "My diverse skill set and passion for innovation make me an asset for future projects, and I'm eager to bring my expertise to your team. In my spare time, I continue to actively pursue self-learning, exploring new technologies and building a range of applications and webpages to stay at the forefront of industry advancements."
+        ]
+    },
+    {
         title: (<><FlightTakeoffIcon sx={{ verticalAlign: "-10%" }} />HK......<FlightLandIcon sx={{ verticalAlign: "-10%" }} />CA</>),
         subheader: "July, 2023 • Vancouver",
         image: img1,
@@ -23,17 +34,6 @@ export const cardInfo = [
             "My motivation behind this significant change was rooted in a deep appreciation for the slower-paced rhythm of life and the enriching living environment that Canada offers. This transition reflects my commitment to embracing new challenges and opportunities while seeking an environment that aligns with my values and aspirations.",
             "As a dedicated and adaptable professional, I am eager to apply the skills and experiences I've gained from my previous role to contribute to innovative projects and bring a fresh perspective to the Canadian tech industry.",
             "I am excited to connect with employers who value initiative, diversity, and a passion for continuous improvement. I believe my journey has equipped me with a unique blend of experiences that can enrich their teams and projects."
-        ]
-    },
-    {
-        title: (<><CodeIcon sx={{ verticalAlign: "-10%" }} />DevLife<CodeOffIcon sx={{ verticalAlign: "-10%" }} /></>),
-        subheader: "Sept 2019 - June 2023 • Hong Kong",
-        image: img2,
-        brief: "4-yrs experienced software development, 1-yr experienced Full Stack App Dev",
-        paragraphs: [
-            "I bring 4 years of experience in software development, gained through coursework and hands-on projects at HKUST. Notable among these projects is my work on a Python-based computer vision system for monitoring elderly residents in care facilities.",
-            "Outside of academia, I've built Python applications and scripts, delving into SQL for database management. In my most recent role as a Full Stack Application Developer, I contributed to .NET 6, ReactJS, and MySQL projects, gaining insights into SDLC methodologies, design patterns, and tools like NAV and SSRS.",
-            "My diverse skill set and passion for innovation make me an asset for future projects, and I'm eager to bring my expertise to your team. In my spare time, I continue to actively pursue self-learning, exploring new technologies and building a range of applications and webpages to stay at the forefront of industry advancements."
         ]
     },
     {
@@ -51,11 +51,12 @@ export const cardInfo = [
         title: (<><WorkIcon sx={{ verticalAlign: "-10%" }} />Working in CA<StorefrontIcon sx={{ verticalAlign: "-10%" }} /></>),
         subheader: "Sept, 2023 - Oct, 2023 • Vancouver, BC",
         image: img4,
-        brief: "One part-time experience in a Chinese herb clinic",
+        brief: "Part-time at Natural Herbs. Now full-time at Canadian Refrigeration",
         paragraphs: [
-            "During my time at the Chinese herb clinic, I gained valuable hands-on experience in efficiently packing various products, including herbal medicines and medicine powder packs. This role sharpened my attention to detail and precision as I ensured the quality and accuracy of each package. I took pride in contributing to the clinic's commitment to providing high-quality products to its customers.",
-            "In addition to product packing, I was responsible for maintaining a well-organized and well-stocked storage environment. This involved replenishing supplies in cabinets and jars, ensuring that everything was readily accessible for both staff and customers. I developed strong organizational skills and a keen understanding of inventory management.",
-            "To enhance the overall patient experience, I took on the task of managing patient waiting and payment flows. This involved efficiently guiding patients through their visit, ensuring a smooth and pleasant process. My ability to manage these critical aspects of the clinic's operations contributed to a positive atmosphere for both patients and staff. I also maintained a clean and inviting store environment, reflecting the clinic's commitment to a welcoming and hygienic space."
+            "At Natural Herbs in Vancouver, I packed herbal medicines, managed patient flow, and handled retail tasks. My focus on details and keeping things organized created a pleasant experience for patients and customers.",
+            "Now at Canadian Refrigeration & Air Conditioning Ltd. in Burnaby, I'm the go-to person as an Office Administrator. I handle finances, communication, and support the team's tech needs. It's about making work smooth and positive.",
+            "Also, as a System Architect, I use tools like Google Sheets, scripts, schedulers and Console App to make things efficient. I upgrade hardware, set up remote tools, and keep everything tech-friendly. My goal is to make our workplace smart and up-to-date.",
+            "I handle emails, keep our info online updated, and always learn new things. I want our team to be tech-savvy and feel good about their work. My role at Canadian Refrigeration & Air Conditioning Ltd. is all about making work easier, smarter, and enjoyable."
         ]
     }
 ];

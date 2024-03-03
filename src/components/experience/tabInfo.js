@@ -85,7 +85,7 @@ export const tabInfo = [
         files: []
     },
     {
-        label: "PT in Ca",
+        label: "PT in CA",
         phrase: "The Service Maestro: Orchestrating Smooth Operations",
         icon: (<StoreIcon />),
         header: "Clerk (Part-time)",
