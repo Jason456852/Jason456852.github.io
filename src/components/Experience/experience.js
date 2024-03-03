@@ -24,7 +24,7 @@ const Experience = () => {
                         value={value}
                         onChange={(e, v) => setValue(v)}
                         textColor={uni_font_color}
-                        indicatorColor='#000000'
+                        indicatorColor='#000'
                         variant="scrollable"
                         scrollButtons={false}
                     >
