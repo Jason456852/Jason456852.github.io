@@ -56,7 +56,7 @@ export const tabInfo = [
         files: []
     },
     {
-        label: "First Job",
+        label: "1st Job",
         phrase: "The Tech Alchemist: Transforming Ideas into Reality",
         icon: <CodeIcon />,
         header: "Application Developer",
@@ -85,7 +85,7 @@ export const tabInfo = [
         files: []
     },
     {
-        label: "PT in Canada",
+        label: "PT in Ca",
         phrase: "The Service Maestro: Orchestrating Smooth Operations",
         icon: (<StoreIcon />),
         header: "Clerk (Part-time)",
@@ -109,7 +109,7 @@ export const tabInfo = [
         files: []
     },
     {
-        label: "First FT in Canada",
+        label: "1st FT in CA",
         phrase: "The Efficiency Catalyst: Streamlining Operations & Empowering Growth",
         icon: (<BallotIcon />),
         header: "Office Administrator, System Architect and Technical Support Specialist",

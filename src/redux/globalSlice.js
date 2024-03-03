@@ -5,10 +5,10 @@ import HomeIcon from '@mui/icons-material/Home';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 export const links = [
-    { icon: HomeIcon, to: '', label: 'home' },
-    { icon: AccountTreeIcon, to: 'myProjects', label: 'my projects' },
-    { icon: InfoIcon, to: 'experience', label: 'experience' },
-    { icon: ConnectWithoutContactIcon, to: 'contact', label: 'contact me' },
+    { index: 0, icon: HomeIcon, to: '', label: 'home' },
+    { index: 1, icon: AccountTreeIcon, to: 'myProjects', label: 'my projects' },
+    { index: 2, icon: InfoIcon, to: 'experience', label: 'experience' },
+    { index: 3, icon: ConnectWithoutContactIcon, to: 'contact', label: 'contact me' },
 ];
 
 export const globalSlice = createSlice({
