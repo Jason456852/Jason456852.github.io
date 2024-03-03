@@ -15,7 +15,7 @@ const Contact = () => {
 
     if (screenWidth <= 800) {
         return (
-            <Grid container>
+            <Grid container sx={{ width: "95%" }}>
                 {tableInfo.map((row, index) => (
                     <Grid item xs={12} key={index} sx={{ fontFamily: uni_font_family, color: uni_font_color }}>
                         <Link sx={{ fontFamily: uni_font_family, color: uni_font_color, wordWrap: 'break-word', textDecorationColor: uni_font_color }}
