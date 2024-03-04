@@ -37,7 +37,7 @@ const Homepage = () => {
                 style={{ transformOrigin: '0 0 0' }}
                 {...(currentPage.index === 0 ? { timeout: 300 } : {})}
             >
-                <Grid container sx={{ maxWidth: "95%" }}>
+                <Grid container sx={{ maxWidth: "100%" }} >
                     {cardInfo.map((cardDetail, index) =>
                         <Grid key={index} item xs={12}>
                             <Card sx={{ margin: "0 auto", marginY: 2 }}>

@@ -20,7 +20,7 @@ const MyProjects = () => {
                 style={{ transformOrigin: '0 0 0' }}
                 {...(currentPage.index === 1 ? { timeout: 300 } : {})}
             >
-                <Grid container sx={{ width: "95%" }}>
+                <Grid container sx={{ width: "100%" }}>
                     <Grid item xs={12}>
                         <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color }}>Coming soon...</Typography>
                     </Grid>

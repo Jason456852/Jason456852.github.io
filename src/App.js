@@ -1,10 +1,10 @@
-import React, { Fragment, Suspense, lazy, useEffect, useState } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Loading from "./components/loading.js";
 import { Link as RouterLink } from "react-router-dom";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Avatar, Button, ButtonGroup, Grid, Icon, Link, Stack, Tooltip, Typography } from "@mui/material";
+import { Avatar, Button, ButtonGroup, Divider, Grid, Icon, Link, Stack, Tooltip, Typography } from "@mui/material";
 import DvrIcon from '@mui/icons-material/Dvr';
 import { uni_font_color, uni_font_color_sub_1, uni_font_family } from "./components/constants.js";
 import icon from "./media/icon.jpg";
@@ -26,7 +26,7 @@ const App = () => {
     const [open, setOpen] = useState(false);
 
     const dispatch = useDispatch();
-    const currentPage = useSelector(state=>state.global.currentPage);
+    const currentPage = useSelector(state => state.global.currentPage);
     const screenWidth = useSelector(state => state.global.screenWidth);
 
     const toggleDrawer = (newOpen) => () => setOpen(newOpen);
@@ -42,15 +42,8 @@ const App = () => {
         return (
             <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })}>
                 <CssBaseline />
-                <Grid
-                    sx={{ paddingX: 3 }}
-                    container
-                    spacing={2}
-                    direction="column"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    <Grid item xs={12}>
+                <List>
+                    <ListItem sx={{ userSelect: 'none' }}>
                         <Typography variant="h3"
                             sx={{
                                 margin: "0 auto",
@@ -61,52 +54,56 @@ const App = () => {
                             }} >
                             Pak Ling YEUNG
                         </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Button onClick={toggleDrawer(true)}>
-                            <Icon component={currentPage.icon} sx={{ verticalAlign: "-20%", fontSize: 40, color: uni_font_color_sub_1 }} />
-                            <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }} variant="button" fontWeight="bold">
-                                {currentPage.label}
-                            </Typography>
-                        </Button>
-                        <Drawer
-                            open={open}
-                            onClose={toggleDrawer(false)}
-                        >
-                            <Box sx={{ width: "100%", height: "100%", backgroundColor: "#000" }} role="presentation" onClick={toggleDrawer(false)}>
-                                <List>
-                                    {links.map((link, index) => (
-                                        <ListItem key={index} disablePadding>
-                                            <Button>
-                                                <Link
-                                                    color="inherit"
-                                                    underline="hover"
-                                                    component={RouterLink}
-                                                    to={link.to}
-                                                    onClick={(e) => dispatch(setCurrentPage(index))}
-                                                    sx={{ textAlign: "center" }}
-                                                >
-                                                    <Icon component={link.icon} sx={{ verticalAlign: "-20%", fontSize: 40, color: uni_font_color_sub_1 }} />
-                                                    <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }} variant="button" fontWeight="bold">
-                                                        {link.label}
-                                                    </Typography>
-                                                </Link>
-                                            </Button>
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Box>
-                        </Drawer>
-                    </Grid>
-                    <Grid item xs={12}>
+                    </ListItem>
+                    <Divider
+                        children={
+                            <Button onClick={toggleDrawer(true)}>
+                                <Icon component={currentPage.icon} sx={{ verticalAlign: "-20%", fontSize: 40, color: uni_font_color_sub_1 }} />
+                                <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }} variant="button" fontWeight="bold">
+                                    {currentPage.label}
+                                </Typography>
+                            </Button>
+                        }
+                        variant="middle"
+                        component={"li"}
+                        sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
+                    <Drawer
+                        open={open}
+                        onClose={toggleDrawer(false)}
+                    >
+                        <Box sx={{ width: "100%", height: "100%", backgroundColor: "#000" }} role="presentation" onClick={toggleDrawer(false)}>
+                            <List>
+                                {links.map((link, index) => (
+                                    <ListItem key={index} disablePadding>
+                                        <Button>
+                                            <Link
+                                                color="inherit"
+                                                underline="hover"
+                                                component={RouterLink}
+                                                to={link.to}
+                                                onClick={(e) => dispatch(setCurrentPage(index))}
+                                                sx={{ textAlign: "center" }}
+                                            >
+                                                <Icon component={link.icon} sx={{ verticalAlign: "-20%", fontSize: 40, color: uni_font_color_sub_1 }} />
+                                                <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }} variant="button" fontWeight="bold">
+                                                    {link.label}
+                                                </Typography>
+                                            </Link>
+                                        </Button>
+                                    </ListItem>
+                                ))}
+                            </List>
+                        </Box>
+                    </Drawer>
+                    <ListItem alignItems="center">
                         <Routes>
                             <Route path="/" element={<Suspense fallback={<Loading />}><Homepage /></Suspense>}></Route>
                             <Route path="/myProjects" element={<Suspense fallback={<Loading />}><MyProjects /></Suspense>}></Route>
                             <Route path="/experience" element={<Suspense fallback={<Loading />}><Experience /></Suspense>}></Route>
                             <Route path="/contact" element={<Suspense fallback={<Loading />}><Contact /></Suspense>}></Route>
                         </Routes>
-                    </Grid>
-                </Grid>
+                    </ListItem>
+                </List>
             </ThemeProvider >
         );
     }
@@ -119,7 +116,7 @@ const App = () => {
                     sx={{ width: "95%", margin: "0 auto", alignItems: 'center' }}
                     spacing={2}
                 >
-                    <Grid item xs={2}>
+                    <Grid item xs={2} sx={{ userSelect: 'none' }}>
                         <Stack>
                             <Avatar size="lg" sx={{ margin: "0 auto", PointerEvent: "none", onclick: "none" }} src={icon} />
                             <Typography variant="button" sx={{ margin: "0 auto", color: uni_font_color, fontFamily: uni_font_family }}>
@@ -127,7 +124,7 @@ const App = () => {
                             </Typography>
                         </Stack>
                     </Grid>
-                    <Grid item xs={8}>
+                    <Grid item xs={8} sx={{ userSelect: 'none' }}>
                         <Stack>
                             <Typography variant="h3"
                                 sx={{
@@ -140,7 +137,7 @@ const App = () => {
                             </Typography>
                         </Stack>
                     </Grid>
-                    <Grid item xs={2}>
+                    <Grid item xs={2} sx={{ userSelect: 'none' }}>
                         <Stack>
                             <Tooltip
                                 componentsProps={{
@@ -161,6 +158,7 @@ const App = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
+                        userSelect: 'none'
                     }}>
                         <ButtonGroup size="large" variant="text" color="success" >{links.map((link, index) => (
                             <Button key={index}>

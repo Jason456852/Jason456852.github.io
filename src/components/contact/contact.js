@@ -21,7 +21,7 @@ const Contact = () => {
                 style={{ transformOrigin: '0 0 0' }}
                 {...(currentPage.index === 3 ? { timeout: 300 } : {})}
             >
-                <Grid container sx={{ width: "95%" }}>
+                <Grid container sx={{ width: "100%" }}>
                     {tableInfo.map((row, index) => (
                         <Grow
                             in={true}

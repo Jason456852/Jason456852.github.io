@@ -24,7 +24,7 @@ const Experience = () => {
                 style={{ transformOrigin: '0 0 0' }}
                 {...(currentPage.index === 2 ? { timeout: 300 } : {})}
             >
-                <Grid container sx={{ maxWidth: "95%" }}>
+                <Grid container sx={{ maxWidth: "100%" }}>
                     <Grid item xs={12} sx={{ maxWidth: (screenWidth * 85 / 100) }}>
                         <Tabs
                             value={value}
