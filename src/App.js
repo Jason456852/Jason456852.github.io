@@ -36,7 +36,7 @@ const App = () => {
     useEffect(() => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    });
+    }, []);
 
     if (screenWidth <= 800) {
         return (
