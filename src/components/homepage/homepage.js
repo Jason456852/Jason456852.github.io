@@ -50,7 +50,7 @@ const Homepage = () => {
                                         {cardDetail.subheader}
                                     </Typography>}
                                 />
-                                <CardMedia component="img" height="230" image={cardDetail.image} />
+                                <CardMedia component="img" image={cardDetail.image} />
                                 <CardContent>
                                     <Typography variant="body2" color={uni_font_color_sub_1} fontFamily={uni_font_family}>
                                         {"> " + cardDetail.brief}
