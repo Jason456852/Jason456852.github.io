@@ -1,22 +1,18 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Loading from "./components/loading.js";
 import { Link as RouterLink } from "react-router-dom";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { AppBar, Avatar, Breadcrumbs, Button, ButtonGroup, Collapse, Divider, Grid, Icon, IconButton, Link, Stack, Toolbar, Tooltip, Typography, styled } from "@mui/material";
-import DvrIcon from '@mui/icons-material/Dvr';
-import { uni_bgcolor, uni_font_color, uni_font_color_sub_1, uni_font_family } from "./components/constants.js";
-import icon from "./media/icon.jpg";
-
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import MenuIcon from '@mui/icons-material/Menu';
-
 import { useDispatch, useSelector } from "react-redux";
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { AppBar, Avatar, Box, Button, ButtonGroup, Collapse, CssBaseline, Divider, Drawer, Icon, IconButton, Link, List, ListItem, styled, Toolbar, Tooltip, Typography, } from "@mui/material";
+
+import { uni_bgcolor, uni_font_color, uni_font_color_sub_1, uni_font_family } from "./components/constants.js";
+import Loading from "./components/loading.js";
+import icon from "./media/icon.jpg";
 import { links, setCurrentPage, setScreenWidth } from "./redux/globalSlice";
+
+import MenuIcon from '@mui/icons-material/Menu';
+import DvrIcon from '@mui/icons-material/Dvr';
 
 const Homepage = lazy(() => import("./components/homepage/homepage.js"));
 const MyProjects = lazy(() => import("./components/myProjects/myProjects.js"));
@@ -25,7 +21,7 @@ const Contact = lazy(() => import("./components/contact/contact.js"));
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
-const styles = {
+const titleStyles = {
     heading: {
         flexGrow: 1,
         letterSpacing: '.3rem',
@@ -86,7 +82,7 @@ const App = () => {
                             variant="h6"
                             component="div"
                             color={uni_font_color}
-                            sx={styles.heading}
+                            sx={titleStyles.heading}
                         >
                             JASON YEUNG
                         </Typography>
@@ -176,7 +172,7 @@ const App = () => {
                             variant="h6"
                             component="div"
                             color={uni_font_color}
-                            sx={styles.heading}
+                            sx={titleStyles.heading}
                         >
                             JASON YEUNG
                         </Typography>

@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Grow, Typography } from "@mui/material";
+import { Box, Grow, Typography } from "@mui/material";
 import { uni_font_color, uni_font_family } from "../constants";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";

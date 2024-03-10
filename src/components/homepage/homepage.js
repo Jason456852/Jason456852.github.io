@@ -29,7 +29,7 @@ const Homepage = () => {
 
     useEffect(() => {
         dispatch(setCurrentPage(0));
-    })
+    });
 
     if (screenWidth <= 800) {
         return (
