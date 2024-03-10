@@ -1,25 +1,11 @@
-import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography, Divider, Grow, Box, Zoom } from "@mui/material";
+import { Grid, Card, CardHeader, CardMedia, CardContent, Collapse, Typography, Grow, Box } from "@mui/material";
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { uni_font_family, uni_font_color, uni_font_color_sub_1 } from "../constants";
 import { cardInfo } from "./cardInfo";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleExpanded } from "../../redux/homepageSlice";
 import { useEffect } from "react";
 import { setCurrentPage } from "../../redux/globalSlice";
-
-const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-    color: uni_font_color_sub_1,
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-    }),
-}));
 
 const Homepage = () => {
     const dispatch = useDispatch();
