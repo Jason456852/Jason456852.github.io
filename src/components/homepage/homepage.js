@@ -1,4 +1,4 @@
-import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography, Divider, Grow, Box } from "@mui/material";
+import { Grid, Card, CardHeader, CardMedia, CardContent, CardActions, Collapse, IconButton, Typography, Divider, Grow, Box, Zoom } from "@mui/material";
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -50,18 +50,20 @@ const Homepage = () => {
                                         {cardDetail.subheader}
                                     </Typography>}
                                 />
-                                <CardMedia component="img" image={cardDetail.image} />
-                                <CardContent>
-                                    <Typography variant="body2" color={uni_font_color_sub_1} fontFamily={uni_font_family}>
-                                        {"> " + cardDetail.brief}
+                                <Collapse collapsedSize={220} in={expanded[index]}>
+                                    <CardMedia component="img" image={cardDetail.image} />
+                                </Collapse>
+                                {!expanded[index] && <CardContent>
+                                    <Typography variant="body2" onClick={() => dispatch(toggleExpanded(index))} fontFamily={uni_font_family} sx={{
+                                        color: uni_font_color_sub_1,
+                                        transition: "color 0.3s",
+                                        "&:hover": {
+                                            color: uni_font_color
+                                        }
+                                    }}>
+                                        {"> " + cardDetail.brief + "..."}
                                     </Typography>
-                                </CardContent>
-                                <Divider children="More..." size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }} />
-                                <CardActions disableSpacing>
-                                    <ExpandMore expand={expanded[index]} onClick={() => dispatch(toggleExpanded(index))} aria-expanded={expanded[index]}>
-                                        <ExpandMoreIcon fontSize="small" />
-                                    </ExpandMore>
-                                </CardActions>
+                                </CardContent>}
                                 <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
                                     <CardContent>
                                         {cardDetail.paragraphs.map((v, i) =>
@@ -73,7 +75,19 @@ const Homepage = () => {
                                                 }}
                                                 {...(expanded[index] ? { timeout: 1000 } : {})}
                                             >
-                                                <Typography key={i} paragraph variant="body2" color={uni_font_color} fontFamily={uni_font_family}>
+                                                <Typography
+                                                    key={i}
+                                                    onClick={() => dispatch(toggleExpanded(index))}
+                                                    paragraph
+                                                    variant="body2"
+                                                    fontFamily={uni_font_family}
+                                                    sx={{
+                                                        color: uni_font_color_sub_1,
+                                                        "&:hover": {
+                                                            color: uni_font_color
+                                                        }
+                                                    }}
+                                                >
                                                     {"> " + v}
                                                 </Typography>
                                             </Grow>)}
@@ -94,7 +108,6 @@ const Homepage = () => {
                 {...(currentPage.index === 0 ? { timeout: 300 } : {})}
             >
                 <Box>
-                    <Divider children="Home" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
                     <Grid container sx={{ margin: "0 auto" }}>
                         {cardInfo.map((cardDetail, index) =>
                             <Grid key={index} item xs={(12 / Math.round(screenWidth * 80 / 35000))}>
@@ -107,18 +120,18 @@ const Homepage = () => {
                                             {cardDetail.subheader}
                                         </Typography>}
                                     />
-                                    <CardMedia component="img" height="230" image={cardDetail.image} />
-                                    <CardContent>
-                                        <Typography variant="body2" color={uni_font_color_sub_1} fontFamily={uni_font_family}>
-                                            {"> " + cardDetail.brief}
+                                    <CardMedia component="img" image={cardDetail.image} />
+                                    {!expanded[index] && <CardContent>
+                                        <Typography variant="body2" onClick={() => dispatch(toggleExpanded(index))} fontFamily={uni_font_family} sx={{
+                                            color: uni_font_color_sub_1,
+                                            transition: "color 0.3s",
+                                            "&:hover": {
+                                                color: uni_font_color
+                                            }
+                                        }}>
+                                            {"> " + cardDetail.brief + "..."}
                                         </Typography>
-                                    </CardContent>
-                                    <Divider children="More..." size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }} />
-                                    <CardActions disableSpacing>
-                                        <ExpandMore expand={expanded[index]} onClick={() => dispatch(toggleExpanded(index))} aria-expanded={expanded[index]}>
-                                            <ExpandMoreIcon fontSize="small" />
-                                        </ExpandMore>
-                                    </CardActions>
+                                    </CardContent>}
                                     <Collapse in={expanded[index]} timeout="auto" unmountOnExit>
                                         <CardContent>
                                             {cardDetail.paragraphs.map((v, i) =>
@@ -130,9 +143,21 @@ const Homepage = () => {
                                                     }}
                                                     {...(expanded[index] ? { timeout: 1000 } : {})}
                                                 >
-                                                    <Typography key={i} paragraph variant="body2" color={uni_font_color} fontFamily={uni_font_family}>
-                                                        {"> " + v}
-                                                    </Typography>
+                                                    <Typography
+                                                    key={i}
+                                                    onClick={() => dispatch(toggleExpanded(index))}
+                                                    paragraph
+                                                    variant="body2"
+                                                    fontFamily={uni_font_family}
+                                                    sx={{
+                                                        color: uni_font_color_sub_1,
+                                                        "&:hover": {
+                                                            color: uni_font_color
+                                                        }
+                                                    }}
+                                                >
+                                                    {"> " + v}
+                                                </Typography>
                                                 </Grow>)}
                                         </CardContent>
                                     </Collapse>

@@ -168,7 +168,6 @@ const Experience = () => {
                 {...(currentPage.index === 2 ? { timeout: 300 } : {})}
             >
                 <Box>
-                    <Divider children="Experience" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
                     <Box sx={{ display: 'flex' }}>
                         <Box sx={{ display: 'flex', width: "min-content" }}>
                             <Tabs

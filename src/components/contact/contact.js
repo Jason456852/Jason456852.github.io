@@ -72,7 +72,6 @@ const Contact = () => {
                 {...(currentPage.index === 3 ? { timeout: 300 } : {})}
             >
                 <Box>
-                    <Divider children="Contact" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
                     <TableContainer component={Paper} sx={{ maxWidth: "95%", margin: "0 auto", marginTop: 5, backgroundColor: "black", border: "1px solid green" }}>
                         <Table>
                             <TableHead>

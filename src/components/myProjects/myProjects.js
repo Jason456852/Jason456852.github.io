@@ -20,11 +20,9 @@ const MyProjects = () => {
                 style={{ transformOrigin: '0 0 0' }}
                 {...(currentPage.index === 1 ? { timeout: 300 } : {})}
             >
-                <Grid container sx={{ width: "100%" }}>
-                    <Grid item xs={12}>
-                        <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color }}>Coming soon...</Typography>
-                    </Grid>
-                </Grid>
+                <Box>
+                    <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color }}>Coming soon...</Typography>
+                </Box>
             </Grow>
         );
     } else {
@@ -35,7 +33,6 @@ const MyProjects = () => {
                 {...(currentPage.index === 1 ? { timeout: 300 } : {})}
             >
                 <Box>
-                    <Divider children="My Projects" size="sm" sx={{ fontFamily: uni_font_family, color: uni_font_color }} />
                     <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color }}>Coming soon...</Typography>
                 </Box>
             </Grow>
