@@ -1,7 +1,8 @@
 export const projectInfo = [
     {
         name: "Canadian Refrigeration Simple Homepage",
-        description: "This is a very simple webpage for me to test myself of the skills and knowledge of basic webpage building. After I built the web page with HTML, CSS and JavaScript, I learned and added TailwindCSS.",
+        description: 
+        "Explore my latest project, the company webpage, where I've showcased my expertise in HTML, CSS, and JavaScript. As a testament to continuous learning and improvement, I've integrated TailwindCSS to elevate the design and functionality. Dive in and witness firsthand the fusion of skill and innovation!",
         languages: "HTML, CSS, JavaScript, TailwindCSS",
         link: {
             isIframe: true,
