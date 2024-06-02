@@ -21,14 +21,14 @@ const MyProjects = () => {
                 style={{ transformOrigin: '0 0 0' }}
                 {...(currentPage.index === 1 ? { timeout: 300 } : {})}
             >
-                <Box sx={{ maxWidth: "100%" }}>
-                    {projectInfo.map((project, index) => <>
+                <Box sx={{ maxWidth: "100%", padding: 5 }}>
+                    {projectInfo.map((project) => <>
                         <Typography gutterBottom sx={{ fontFamily: uni_font_family, color: uni_font_color }}>{project.name}</Typography>
                         <Typography gutterBottom sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }}>{project.description}</Typography>
-                        <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }}>Languages & Library</Typography>
-                        <Typography gutterBottom sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }}>{project.languages}</Typography>
+                        <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }}>Technologies</Typography>
+                        <Typography gutterBottom sx={{ fontFamily: uni_font_family, color: uni_font_color_sub_1 }}>{project.technologies}</Typography>
                         {project.link.isIframe ?
-                            <iframe style={{ minHeight: 600, borderWidth: 2, borderColor: uni_font_color, width: '100%', height: '100%', overflow:'hidden' }} src={project.link.src} /> :
+                            <iframe title={project.name} style={{ minHeight: 600, borderWidth: 2, borderColor: uni_font_color, width: '100%', height: '100%', overflow:'hidden' }} src={project.link.src} /> :
                             <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color }}>{project.name}</Typography>}
                     </>)}
                 </Box>
