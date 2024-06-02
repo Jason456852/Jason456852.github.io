@@ -16,7 +16,7 @@ export const cardInfo = [
     {
         title: (<><CodeIcon sx={{ verticalAlign: "-10%" }} />DevLife<CodeOffIcon sx={{ verticalAlign: "-10%" }} /></>),
         subheader: "Sept 2019 - June 2023 • Hong Kong",
-        image: img2,
+        image: img1,
         brief: "4-yrs experienced software development, 1-yr experienced Full Stack App Dev",
         paragraphs: [
             "I bring 4 years of experience in software development, gained through coursework and hands-on projects at HKUST. Notable among these projects is my work on a Python-based computer vision system for monitoring elderly residents in care facilities.",
@@ -27,7 +27,7 @@ export const cardInfo = [
     {
         title: (<><FlightTakeoffIcon sx={{ verticalAlign: "-10%" }} />HK......<FlightLandIcon sx={{ verticalAlign: "-10%" }} />CA</>),
         subheader: "July, 2023 • Vancouver",
-        image: img1,
+        image: img2,
         brief: "Left previous position voluntarily to pursue personal and professional growth in Canada",
         paragraphs: [
             "I made a deliberate decision to depart from my previous position as a full-stack application developer in Hong Kong, opting instead to embark on a journey of personal and professional growth in Canada.",
