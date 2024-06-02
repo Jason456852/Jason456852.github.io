@@ -174,7 +174,7 @@ const App = () => {
                             color={uni_font_color}
                             sx={titleStyles.heading}
                         >
-                            JASON YEUNG
+                            JASON YEUNG 
                         </Typography>
                         <IconButton
                             size="large"
