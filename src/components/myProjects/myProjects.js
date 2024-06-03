@@ -60,7 +60,7 @@ const MyProjects = () => {
                         <Grid item xs={index % 2 === 1 ? 7 : 5} minHeight={600}>
                             {project.link.isIframe ?
                                 // eslint-disable-next-line jsx-a11y/iframe-has-title
-                                <iframe style={{ borderWidth: 2, borderColor: uni_font_color, width: '100%', height: '100%' }} src={project.link.src} /> : <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color }}>Link: {projectInfo[index].name}</Typography>}
+                                <iframe style={{ borderWidth: 2, borderColor: uni_font_color, width: '100%', height: '100%' }} src={project.link.src} /> : <Typography sx={{ fontFamily: uni_font_family, color: uni_font_color }}>Link: {projectInfo[index].link.src}</Typography>}
                         </Grid>
                     </>)}
                 </Grid>
