@@ -16,7 +16,7 @@ export const projectInfo = [
         technologies: "AWS Elastic Beanstalk, Relational Database Service, Wordpress",
         link: {
             isIframe: false,
-            src: "http://wordpress-env.eba-z8jhfa3p.us-east-1.elasticbeanstalk.com/"
+            src: "nope it is under AWS Beanstalk, not mine"
         }
     },
 ];
